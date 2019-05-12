@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "openzeppelin-solidity": "^2.2.0",
+    "web3": "0.20.7"
+  }
+}

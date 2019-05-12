@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Helo Ethereum</title>
+    <script type="text/javascript" src="node_modules/web3/dist/web3.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+      form div {
+        margin-bottom: 10px;
+      }
+      form input[type="text"] {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Address 1: <span id="address1"></span>, koin <span id="coin1"></span></p>
+    <p>Address 2: <span id="address2"></span>, koin <span id="coin2"></span></p>
+
+    <form>
+      <div>
+        <label for="from">Dari</label>
+        <input type="text" id="from">
+      </div>
+      <div>
+        <label for="to">Untuk</label>
+        <input type="text" id="to">
+      </div>
+      <div>
+        <label for="amount">Jumlah Koin</label>
+        <input type="text" id="amount">
+      </div>
+      <button onclick="transfer()">Transfer</button>
+    </form>
+  </body>
+</html>
