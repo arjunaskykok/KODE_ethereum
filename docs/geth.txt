@@ -11,8 +11,8 @@ web3
 web3.fromWei(10000000000000, 'ether')
 web3.toWei(3, 'ether')
 
-eth.syncing.currentBlock
-eth.getTransactionFromBlock(eth.syncing.currentBlock, 0)
+eth.blockNumber
+eth.getTransactionFromBlock(eth.blockNumber, 0)
 eth.getBalance(eth.accounts[0])
 
 miner.setEtherbase(eth.accounts[0])
