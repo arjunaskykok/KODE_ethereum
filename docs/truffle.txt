@@ -1,6 +1,0 @@
-yard global add truffle
-mkdir truffleproject
-truffle init
-truffle compile
-truffle migrate
-truffle test

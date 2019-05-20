@@ -1,0 +1,15 @@
+Macs
+====
+brew update ethereum/ethereum
+brew install solidity
+
+Linux
+=====
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install solc
+
+Compilation
+===========
+
+solc --pretty-json --combined-json abi,bin MinimumToken.sol

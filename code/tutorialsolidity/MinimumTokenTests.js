@@ -22,18 +22,23 @@ describe('MinimumToken', function() {
 
   describe('MinimumToken constructor', function()  {
     it('Contract owner gets initial supply', function(done) {
-      assert(instance.balanceOf(deployer).toNumber(), 100);
+      assert.equal(instance.balanceOf(deployer).toNumber(), 10000);
       done();
     });
   });
 
   describe('MinimumToken transfer', function()  {
     it('Contract user can transfer coin', function(done) {
-      let destination = web3.eth.accounts[1];
+      var destination = web3.eth.accounts[1];
 
-      instance.transfer(destination, 30, { from: deployer, gas: gasEstimate })
-      assert(instance.balanceOf(destination).toNumber(), 30);
-      assert(instance.balanceOf(deployer).toNumber(), 70);
+      assert.equal(instance.balanceOf(deployer), 10000);
+      assert.equal(instance.balanceOf(destination).toNumber(), 0);
+
+      instance.transfer(destination, 100, { from: deployer, gas: gasEstimate })
+
+      assert.equal(instance.balanceOf(deployer).toNumber(), 9900);
+      assert.equal(instance.balanceOf(destination).toNumber(), 100);
+
       done();
     });
   });

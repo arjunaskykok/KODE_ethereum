@@ -1,0 +1,3 @@
+https://theethereum.wiki/w/index.php/ERC20_Token_Standard
+
+yarn add openzeppelin-solidity

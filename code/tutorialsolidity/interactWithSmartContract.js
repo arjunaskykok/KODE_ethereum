@@ -28,12 +28,12 @@ console.log(MyTokenInstance.getString.call());
 //const senderPassword = "password1234";
 //web3.personal.unlockAccount(manager, senderPassword, 6000);
 
-MyTokenInstance.transfer(account1, 3, {from: manager, gas: gasEstimate}, function(e, data) {
+MyTokenInstance.transfer(account1, 100, {from: manager, gas: gasEstimate}, function(e, data) {
   if (e==null) {
     console.log(data);
 
-    var managerBalance = MyTokenInstance.balanceOf(manager);
-    var accountBalance = MyTokenInstance.balanceOf(account1);
+    managerBalance = MyTokenInstance.balanceOf(manager);
+    accountBalance = MyTokenInstance.balanceOf(account1);
 
     console.log("Manager balance: " + managerBalance.toNumber());
     console.log("Destination account balance: " + accountBalance.toNumber());
